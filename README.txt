@@ -34,3 +34,6 @@ Credits:
 	Other:
 		jQuery (jquery.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
+
+
+Also, for the part that sends the email I used the website: https://formspree.io/ , it is free and easy to use, 100% recommended :)
