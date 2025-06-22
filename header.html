@@ -3,45 +3,59 @@
 <body>
 	<div id="header" class="container">
 
-    <!-- Logo -->
-    <h1 id="logo"><a href="index.html">Home</a></h1>
+        <!-- Logo -->
+        <h1 id="logo"><a href="index.html">Home</a></h1>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <ul>
-            <li>
-                <a href="#">Índice</a>
-                <ul>
-                    <li><a href="#">Mat ESO</a>
-                        <ul>
-                            <li><a href="#">Primer Tema</a></li>
-                            <li><a href="#">Segundo Tema</a></li>
-                            <li><a href="#">Tercer Tema</a></li>
-                            <li><a href="#">Ayudas</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Mat Bach</a>
-                        <ul>
-                            <li><a href="#">Primer Tema</a></li>
-                            <li><a href="#">Segundo Tema</a></li>
-                            <li><a href="#">Tercer Tema</a></li>
-                            <li><a href="#">Ayudas</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="left-sidebar.html">Mat ESO</a></li>
-            <li class="break"><a href="right-sidebar.html">Mat Bach</a></li>
-            <li class="has-submenu">
-                <a href="no-sidebar.html" onclick="return true;">Otros</a>
-                <ul>
-                    <li><a href="#">Tic</a></li>
-                    <li><a href="#">Tutoria</a></li>
-                    <li><a href="#">Tablón</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li>
+                    <a href="#">Índice</a>
+                    <ul>
+                        <li><a href="#">Mat ESO</a>
+                            <ul>
+                                <li><a href="#">Primer Tema</a></li>
+                                <li><a href="#">Segundo Tema</a></li>
+                                <li><a href="#">Tercer Tema</a></li>
+                                <li><a href="#">Ayudas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Mat Bach</a>
+                            <ul>
+                                <li><a href="#">Primer Tema</a></li>
+                                <li><a href="#">Segundo Tema</a></li>
+                                <li><a href="#">Tercer Tema</a></li>
+                                <li><a href="#">Ayudas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="left-sidebar.html">Mat ESO</a></li>
+                <li class="break"><a href="right-sidebar.html">Mat Bach</a></li>
+                <li class="has-submenu">
+                    <a href="no-sidebar.html" onclick="return true;">Otros</a>
+                    <ul>
+                        <li><a href="#">Tic</a></li>
+                        <li><a href="#">Tutoria</a></li>
+                        <li><a href="#">Tablón</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+                <!-- Botón menú móvil (hamburguesa) -->
+        <div id="navButton">
+            <a href="#navPanel" class="toggle"></a>
+        </div>
+
+            <!-- Menú deslizable para móvil -->
+        <div id="navPanel">
+            <a href="index.html" class="link">Home</a>
+            <a href="left-sidebar.html" class="link">Mat ESO</a>
+            <a href="right-sidebar.html" class="link">Mat Bach</a>
+            <a href="no-sidebar.html" class="link">Otros</a>
+        </div>
+
 
 	</div>
 </body>			

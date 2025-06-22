@@ -1413,12 +1413,13 @@
 				@include vendor('transition', ('transform #{_duration(navPanel)} ease'));
 				@include vendor('background-image', ('url("images/overlay.png")', 'url("images/navPanel.svg")', 'linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.25))'));
 				display: block;
+				height: 25vh;    
 				left: 0;
 				overflow-y: auto;
 				position: fixed;
 				top: 0;
 				width: 100%;
-				height: _size(navPanel);
+				//height: _size(navPanel);
 				z-index: _misc(z-index-base) + 2;
 				box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
 				font-size: 1em;

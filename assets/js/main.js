@@ -31,48 +31,66 @@
 
 	// Nav.
 
-		// Button.
-			$(
-				'<div id="navButton">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);
+		
+	// Cargar header global
+	$(function() {
+		$("#header-placeholder").load("header.html", function() {
+			// Re-inicializar el menú después de cargar el header
+			if (typeof $.fn.dropotron !== 'undefined') {
+				$('#nav > ul').dropotron({
+					mode: 'fade',
+					speed: 300,
+					alignment: 'center',
+					noOpenerFade: true
+				});
+			}
+			var $navPanel = $('#navPanel');
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						'<a href="index.html" class="link depth-0">Home</a>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'top',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
-				    // Cargar header global
-				$(function() {
-					$("#header-placeholder").load("header.html", function() {
-						// Re-inicializar el menú después de cargar el header
-						if (typeof $.fn.dropotron !== 'undefined') {
-							$('#nav > ul').dropotron({
-								mode: 'fade',
-								speed: 300,
-								alignment: 'center',
-								noOpenerFade: true
-							});
-						}
-					});
-				});
-				 $(function(){   
-					$("#footer-placeholder").load("footer.html");
-        		});
+			// Toggle general menú móvil (botón hamburguesa)
+			$('#navButton .toggle').off('click').on('click', function(e) {
+			e.preventDefault();
+			if ($navPanel.hasClass('visible')) {
+				$navPanel.removeClass('visible').css('transform', 'translateY(-50vh)');
+			} else {
+				$navPanel.addClass('visible').css('transform', 'translateY(0vh)');
+			}
+			});
+
+			// Toggle submenús en móvil (pulsar en enlace con submenu)
+			$('#nav li.has-submenu > a').off('click').on('click', function(e) {
+			var $submenu = $(this).next('ul');
+
+			// Sólo para móvil (ajusta según breakpoints)
+			if (window.innerWidth <= 736) {
+				e.preventDefault();
+
+				if ($submenu.is(':visible')) {
+				$submenu.slideUp();
+				} else {
+				$('#nav ul ul').slideUp(); // Cierra otros submenús
+				$submenu.slideDown();
+				}
+			}
+			});
+
+			// Cerrar menú al pulsar en enlaces normales (sin submenú)
+			$('#nav a:not(.has-submenu > a)').off('click').on('click', function() {
+			if (window.innerWidth <= 736) {
+				$navPanel.removeClass('visible').css('transform', 'translateY(-50vh)');
+			}
+			});
+
+				$(window).on('scroll', function() {
+				var $navPanel = $('#navPanel');
+				if ($navPanel.hasClass('visible')) {
+					$navPanel.removeClass('visible').css('transform', 'translateY(-50vh)');
+				}
+			});
+		});	
+	});
+
+	// cargar footer global	
+	$(function(){   
+		$("#footer-placeholder").load("footer.html");
+	});
 })(jQuery);
