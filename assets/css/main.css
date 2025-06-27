@@ -2165,7 +2165,7 @@ input, select, textarea {
     border: solid 1px rgba(255, 255, 255, 0.75);
     border-top: 0;
     border-radius: 0 0 0.35em 0.35em;
-    color: #fff;
+    color: #353232;
     font-weight: 600;
     letter-spacing: 3px;
     text-align: center;
@@ -2278,13 +2278,13 @@ input, select, textarea {
 
 	#hero {
 		position: relative;
-		color: #fff;
+		color: #353232;
 		text-align: center;
 		z-index: 1;
 	}
 
 		#hero h2 {
-				color: #fff;
+				color: #353232;
 			font-size: 3em;
 			
 		}
@@ -2643,7 +2643,7 @@ input, select, textarea {
 				#sidebar section {
 					border-top: 0;
 					margin-top: 0;
-					padding-top: 1em;
+					padding-top: 0;
 				}
 
 		/* Footer */
