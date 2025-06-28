@@ -29,6 +29,23 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+li.icon {
+  display: flex;
+  align-items: center;
+}
+
+li.icon .alineado {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+li.icon::before {
+  flex-shrink: 0;
+  margin-right: 0.5em;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -198,7 +215,7 @@ input, select, textarea {
 	}
 
 	.feature {
-		text-align: center;
+		text-align: justify;
 	}
 
 /* Sections/Article */
@@ -239,7 +256,7 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: 100%;
-		width: 1200px;
+		width: 1250px;
 	}
 
 		@media screen and (max-width: 1280px) {
@@ -2924,7 +2941,8 @@ input, select, textarea {
 				#navPanel .depth-0 {
 					color: #fff;
 				}
-
+			#navPanel .submenu { display: none; }
+			#navPanel .submenu.active { display: block; }
 			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateY(50vh);
 				-webkit-transform: translateY(50vh);

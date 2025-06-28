@@ -6,7 +6,7 @@ como descargar un libro
 <p><a href="documentos/libro1.pdf" download>Libro 1</a></p>
 hacer una navegación pulsable
 <li class="has-submenu">
-                    <a href="no-sidebar.html" onclick="return true;">Otros</a>
+                    <a href="principal.html" onclick="return true;">Otros</a>
                     <ul>
                         <li><a href="#">Tic</a></li>
                         <li><a href="#">Tutoria</a></li>
